@@ -20,7 +20,7 @@ app.use('/api/v1/address', addressRouter);
 app.use('/api/v1/banner', bannerRouter);
 
 app.all('*', (req, res, next) => {
-  // console.log(res.statusCode);
+  console.log(res.statusCode);
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
 });
 
