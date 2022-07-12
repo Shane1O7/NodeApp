@@ -21,6 +21,7 @@ app.use('/api/v1/banner', bannerRouter);
 
 app.all('*', (req, res, next) => {
   // console.log(res.statusCode);
+  console.log('hii');
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
 });
 
