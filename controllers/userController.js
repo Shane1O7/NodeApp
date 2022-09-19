@@ -8,7 +8,7 @@ const { User } = require('./../model/userModel');
 
 const client = require('twilio')(process.env.ACCOUNT_SID, process.env.AUTH_TOKEN);
 
-//------> Get al Users
+//------> Get all Users
 exports.getAllUsers = async (req, res, next) => {
   const users = await User.find().populate('addresses');
 
